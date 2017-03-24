@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<h3>
+  Total:{{total}}
+</h3>
+<table border=1>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>可疑行为</th>
+      <th>机器IP</th>
+      <th>风险系数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of data">
+      <td>{{d.time}}</td>
+      <td>{{d.things}}</td>
+      <td>{{d.ClientId}}</td>
+      <td>{{d.risk}}</td>
+    </tr>
+  </tbody>
+</table>
