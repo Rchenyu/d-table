@@ -1,21 +1,14 @@
-<h3>
-  Total:{{total}}
-</h3>
-<table border=1>
-  <thead>
-    <tr>
-      <th>时间</th>
-      <th>可疑行为</th>
-      <th>机器IP</th>
-      <th>风险系数</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let d of data">
-      <td>{{d.time}}</td>
-      <td>{{d.things}}</td>
-      <td>{{d.ClientId}}</td>
-      <td>{{d.risk}}</td>
-    </tr>
-  </tbody>
-</table>
+<h3>Total:{{total}}</h3>
+<d-table [source]="data">
+  <d-table-column header="时间" prop="time"></d-table-column>
+  <d-table-column header="可疑行为" prop="things"></d-table-column>
+  <d-table-column header="机器IP" prop="ClientId"></d-table-column>
+  <d-table-column header="风险类型" prop="moduleid" [map]="moduleIdMap"></d-table-column>
+  <d-table-column header="风险系数" prop="risk"></d-table-column>
+  <d-table-column header="操作">
+      <ng-template d-table-cell let-data="data">
+          <a (click)="edit(data)">修改</a>
+          <a href="">删除</a>
+      </ng-template>
+  </d-table-column>
+</d-table>

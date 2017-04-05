@@ -1,0 +1,31 @@
+ul {
+  display: inline-block;
+}
+li {
+  float: left;
+  background-color: #2e323f;
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 12px;
+  border: 1px solid #4e5362;
+  margin-left: 10px;
+  cursor: pointer;
+  //transition: .2s;
+  &.active {
+    border-color: #3b86b8;
+    color: #fff;
+    box-shadow: 0 0 4px #3b86b8;
+  }
+  &.disabled {
+    background-color: transparent;
+    color: #666;
+    cursor: auto;
+  }
+}
+.selector {
+  display: inline-block;
+  vertical-align: top;
+}
+

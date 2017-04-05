@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppService } from './app.service'
+
+import { DTableModule } from './table/d-table.module'
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,8 @@ import { AppService } from './app.service'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DTableModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

@@ -11,6 +11,12 @@ export class AppComponent implements OnInit {
   
   data: Array<any>
   total: number
+    
+  moduleIdMap = ['', '封包','网络','文件','未知','进程','登陆']
+
+  edit(data) {
+    console.log(data)
+  }
 
   ngOnInit(){
     this.service.getData().subscribe((d: MockBackendData) => {
